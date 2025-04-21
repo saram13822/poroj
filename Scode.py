@@ -15,3 +15,9 @@ class EightQueensGA:
                 if solution[i] == solution[j] or abs(solution[i] - solution[j]) == j - i: #بررسی تداخل
                     clashes += 1
         return 28 - clashes  # برازندگی حداکثر 28 برای 8 وزیر
+
+
+
+    def initialize_population(self):
+        """ایجاد جمعیت اولیه به صورت تصادفی."""
+        return [self.random_solution() for _ in range(self.population_size)]
